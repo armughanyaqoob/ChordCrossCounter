@@ -1,6 +1,10 @@
-# CircularChordIntersector
+# ChordCrossCounter
 
-This Python algorithm efficiently counts the number of intersections between chords on a circle. It works as follows:
+## Overview
+
+ChordCrossCounter is a Python project that efficiently counts the number of intersections between chords on a circle. The algorithm takes a list of radii and identifiers as input and returns the total number of intersections.
+
+## How it Works
 
 - Start with two counters: one for total intersections and one for active chords (chords currently "in play").
 - Loop through each identifier:
@@ -9,15 +13,9 @@ This Python algorithm efficiently counts the number of intersections between cho
 - For ending chords, calculate intersections using \(n \times (n-1) / 2\), where \(n\) is the active chord count. This reflects each new chord crossing all existing ones.
 - Once all identifiers are processed, return the total intersection count.
 
-This algorithm takes linear time (O(n)) and space (O(n)) because:
+The algorithm has a time complexity of O(n) and space complexity of O(n), making it efficient for large datasets.
 
-- It visits each identifier once.
-- Operations within each loop are constant time (e.g., checking start/end, updating counters).
-- It uses only a fixed amount of extra memory for the counters.
-
-In simpler terms, the algorithm efficiently counts chord intersections with growing datasets, making it ideal for large scenarios.
-
-## How to Use
+## Usage
 
 1. Define the radii (`rads`) and identifiers (`identifiers`) arrays according to your scenario.
 2. Call the `count_intersections` function with the radii and identifiers as arguments.
@@ -30,3 +28,19 @@ identifiers = ["s1", "s2", "e1", "e2"]
 intersections = count_intersections(rads, identifiers)
 print(f"Number of intersections: {intersections}")
 ```
+
+## Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/yourusername/ChordCrossCounter.git
+    cd ChordCrossCounter
+    ```
+
+2. **Run the script:**
+
+    ```bash
+    python chord_cross_counter.py
+    ```
+
