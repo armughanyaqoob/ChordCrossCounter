@@ -6,15 +6,16 @@ ChordCrossCounter is a Python project that efficiently counts the number of inte
 
 ## How it Works
 
-- Start with two counters: one for total intersections and one for active chords (chords currently "in play").
-- Loop through each identifier:
-  - If it starts with "s," a new chord begins, so increase the active chord count.
-  - If it starts with "e," a chord ends, so calculate intersections and reduce active chords.
-- For ending chords, calculate intersections using \(n \times (n-1) / 2\), where \(n\) is the active chord count. This reflects each new chord crossing all existing ones.
-- Once all identifiers are processed, return the total intersection count.
-
-The algorithm has a time complexity of O(n) and space complexity of O(n), making it efficient for large datasets.
-
+The algorithm presented effectively counts the chord intersections in a circular layout.
+Initializing variables to track intersections and active chords is the first step. Subsequently,
+iterating over the chord list, it determines the beginning and ending positions. It counts the
+number of active chords when it comes across a start point and determines the intersections
+that chord contributed when it comes across an end point. The arrangement of active chords
+determines these intersections. The number of active chords is modified in accordance with
+each iteration. Call the count_intersections function after supplying the list of radian measures
+and chord identifiers to utilize the algorithm. Iterating through the chords, the chords once and
+performing constant-time operations for each chord, the algorithm provides efficient
+performance with a time complexity of O(n).
 ## Usage
 
 1. Define the radii (`rads`) and identifiers (`identifiers`) arrays according to your scenario.
