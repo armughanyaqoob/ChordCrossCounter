@@ -29,8 +29,4 @@ rads = [0.78, 1.47, 1.77, 3.92]
 identifiers = ["s1", "s2", "e1", "e2"]
 intersections = count_intersections(rads, identifiers)
 print(f"Number of intersections: {intersections}")
-
-
 ```
-Feel free to use this algorithm for analyzing chord intersections in various circular scenarios.
-
